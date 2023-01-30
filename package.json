@@ -1,7 +1,7 @@
 {
-  "name": "JATE",
+  "name": "19-web-text-editor",
   "version": "1.0.0",
-  "description": "",
+  "description": "text editor as a progressive web app",
   "main": "server.js",
   "scripts": {
     "start:dev": "",
@@ -12,14 +12,30 @@
     "client": ""
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "pbp66",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
-    "concurrently": "^5.2.0",
-    "nodemon": "^2.0.4"
-  }
+    "concurrently": "^5.3.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^4.2.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "nodemon": "^2.0.4",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "workbox-webpack-plugin": "^6.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pbp66/web-text-editor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pbp66/web-text-editor/issues"
+  },
+  "homepage": "https://github.com/pbp66/web-text-editor#readme"
 }
