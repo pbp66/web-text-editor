@@ -16,21 +16,21 @@ const initdb = async () =>
 	});
 
 export const putDb = async (content) => {
-	console.log("Saving text editor to database");
+	console.log("Saving text jate to database");
 
-	const contactDb = await openDB("editor", 1);
-	const newTransaction = contactDb.transaction("editor", "readwrite");
-	const objectStore = newTransaction.objectStore("editor");
+	const contactDb = await openDB("jate", 1);
+	const newTransaction = contactDb.transaction("jate", "readwrite");
+	const objectStore = newTransaction.objectStore("jate");
 	const request = objectStore.add({ text: content });
 	const result = await request;
 	console.log("text saved!", result);
 };
 
 export const getDb = async () => {
-	console.log("Retrieving previous text editor content");
-	const contactDb = await openDB("editor", 1);
-	const newTransaction = contactDb.transaction("editor", "readonly");
-	const objectStore = newTransaction.objectStore("editor");
+	console.log("Retrieving previous text jate content");
+	const contactDb = await openDB("jate", 1);
+	const newTransaction = contactDb.transaction("jate", "readonly");
+	const objectStore = newTransaction.objectStore("jate");
 	const request = objectStore.getAll();
 	const result = await request;
 	console.log("result.value", result);
