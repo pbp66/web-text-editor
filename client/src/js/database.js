@@ -15,7 +15,6 @@ const initdb = async () =>
 		},
 	});
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
 	console.log("Saving text editor to database");
 
@@ -27,7 +26,6 @@ export const putDb = async (content) => {
 	console.log("text saved!", result);
 };
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
 	console.log("Retrieving previous text editor content");
 	const contactDb = await openDB("editor", 1);
