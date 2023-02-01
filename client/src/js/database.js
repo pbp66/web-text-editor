@@ -1,7 +1,8 @@
 import { openDB } from "idb";
+import { header } from "./header.js";
 
 const initdb = async () =>
-	openDB("jate", 1, {
+	await openDB("jate", 1, {
 		upgrade(db) {
 			if (db.objectStoreNames.contains("jate")) {
 				console.log("jate database already exists");
@@ -16,25 +17,25 @@ const initdb = async () =>
 	});
 
 export const putDb = async (content) => {
-	console.log("Saving text jate to database");
+	console.log("Saving text editor content!");
 
 	const contactDb = await openDB("jate", 1);
 	const newTransaction = contactDb.transaction("jate", "readwrite");
 	const objectStore = newTransaction.objectStore("jate");
-	const request = objectStore.add({ text: content });
+	const request = objectStore.put({ id: 1, content: content });
 	const result = await request;
-	console.log("text saved!", result);
+	console.log("Text saved!", result);
 };
 
 export const getDb = async () => {
-	console.log("Retrieving previous text jate content");
+	console.log("Retrieving previous text editor content");
 	const contactDb = await openDB("jate", 1);
 	const newTransaction = contactDb.transaction("jate", "readonly");
 	const objectStore = newTransaction.objectStore("jate");
 	const request = objectStore.getAll();
 	const result = await request;
 	console.log("result.value", result);
-	return result;
+	return result[0].content;
 };
 
 initdb();
