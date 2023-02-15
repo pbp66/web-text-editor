@@ -19,8 +19,8 @@ const initdb = async () =>
 export const putDb = async (content) => {
 	console.log("Saving text editor content!");
 
-	const contactDb = await openDB("jate", 1);
-	const newTransaction = contactDb.transaction("jate", "readwrite");
+	const textEditorDb = await openDB("jate", 1);
+	const newTransaction = textEditorDb.transaction("jate", "readwrite");
 	const objectStore = newTransaction.objectStore("jate");
 	const request = objectStore.put({ id: 1, content: content });
 	const result = await request;
@@ -29,8 +29,8 @@ export const putDb = async (content) => {
 
 export const getDb = async () => {
 	console.log("Retrieving previous text editor content");
-	const contactDb = await openDB("jate", 1);
-	const newTransaction = contactDb.transaction("jate", "readonly");
+	const textEditorDb = await openDB("jate", 1);
+	const newTransaction = textEditorDb.transaction("jate", "readonly");
 	const objectStore = newTransaction.objectStore("jate");
 	const request = objectStore.getAll();
 	const result = await request;
