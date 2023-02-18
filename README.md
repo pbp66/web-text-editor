@@ -18,11 +18,11 @@ A text editor hosted as a web app
 
 ## Installation
 
-TODO
+No installation required. Click on this link to visit the site: [https://morning-everglades-20609.herokuapp.com/](https://morning-everglades-20609.herokuapp.com/).
 
 ## Usage
 
-TODO
+Usage is simple. The text editor will save any and all text written onto the editor. It automatically saves whenever the editor loses focus and when the application is closed. Additionally, this application can be installed by clicking on the install button.
 
 ## License
 
