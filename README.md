@@ -2,7 +2,7 @@
 
 ## Description
 
-A text editor hosted as a web app
+This repo is for a text editor hosted as a web app. It is build using [webpack](https://webpack.js.org/) and several [webpack plugins](https://webpack.js.org/plugins/): html webpack, workbox,
 
 User Story:
 
