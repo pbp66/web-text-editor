@@ -23,6 +23,7 @@ No installation required. Click on this link to visit the site: [https://morning
 ## Usage
 
 Usage is simple. The text editor will save any and all text written onto the editor. It automatically saves whenever the editor loses focus and when the application is closed. Additionally, this application can be installed by clicking on the install button.
+![Jate Demo](./assets/readme/jate-demo.png)
 
 ## License
 
