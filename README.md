@@ -2,7 +2,9 @@
 
 ## Description
 
-This repo is for a text editor hosted as a web app. It is build using [webpack](https://webpack.js.org/) and several [webpack plugins](https://webpack.js.org/plugins/): html webpack, workbox,
+This repo is for a text editor hosted as a web app. It is build using [webpack](https://webpack.js.org/), a service worker (google workbox) and several [webpack plugins](https://webpack.js.org/plugins/): [html webpack](https://www.npmjs.com/package/html-webpack-plugin), [workbox](https://www.npmjs.com/package/workbox-webpack-plugin), and [pwa manifest](https://www.npmjs.com/package/webpack-pwa-manifest). The text editor is barebones, but acts a Proof Of Concept application and to practice building a simple application with service workers and webpack.
+
+The text is saved using [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
 
 User Story:
 
